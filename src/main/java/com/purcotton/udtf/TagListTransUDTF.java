@@ -11,7 +11,7 @@ import com.google.gson.JsonParser;
 import com.purcotton.pojo.Tag;
 
 // TODO define input and output types, e.g. "string,string->string,bigint".
-@Resolve({"string,string->string,string"})
+@Resolve({"string,string->string,*"})
 public class TagListTransUDTF extends UDTF {
 
     @Override
@@ -31,11 +31,11 @@ public class TagListTransUDTF extends UDTF {
             for(JsonElement tagStr:asJsonArray){
                 Tag tag = gson.fromJson(tagStr, Tag.class);
                 if("crm".equals(tag.getTagSource())){
-                    forward(memberId,tag.getTagCode());
+                    forward(memberId,tag.getTagId(),tag.getTagTime());
                 }
             }
         }else{
-            forward(memberId,null);
+            forward(memberId,null,null);
         }
 
     }
