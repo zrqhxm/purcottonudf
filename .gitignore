@@ -1,0 +1,12 @@
+#ide
+.settings/
+.project
+.classpath
+.idea
+*.iml
+.idea/
+
+#maven
+/target/
+/warehouse/
+/examples/
