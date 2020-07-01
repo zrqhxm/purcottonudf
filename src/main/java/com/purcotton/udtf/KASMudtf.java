@@ -5,7 +5,7 @@ import com.aliyun.odps.udf.UDFException;
 import com.aliyun.odps.udf.UDTF;
 import com.aliyun.odps.udf.annotation.Resolve;
 
-// TODO define input and output types, e.g. "string,string->string,bigint".
+
 @Resolve({"string,string->string,*"})
 public class KASMudtf extends UDTF {
 

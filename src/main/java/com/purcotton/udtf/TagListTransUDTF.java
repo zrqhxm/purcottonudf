@@ -10,7 +10,6 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 import com.purcotton.pojo.Tag;
 
-// TODO define input and output types, e.g. "string,string->string,bigint".
 @Resolve({"string,string->string,*"})
 public class TagListTransUDTF extends UDTF {
 
@@ -37,7 +36,6 @@ public class TagListTransUDTF extends UDTF {
         }else{
             forward(memberId,null,null);
         }
-
     }
 
     @Override
