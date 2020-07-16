@@ -29,7 +29,7 @@ public class TagChangesUDTF extends UDTF {
 
     @Override
     public void process(Object[] args) throws UDFException {
-        //操作类型 0新增 1删除
+        //操作类型 1新增 0删除
         //1 固定标签 2 手动标签 3 企业标签 4 运营标签 5 组合标签
         /*
         {

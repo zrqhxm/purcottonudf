@@ -35,7 +35,11 @@ public class MergeTagListUDF extends UDF {
                     if ("2".equals(tag1.getTagType()) || "3".equals(tag1.getTagType())){
                         tags.add(tag1);
                     }
-                    if("HUBEI_RECEIVED_MASKS_COUPON".equals(tag1.getTagCode())){
+                    if("HUBEI_RECEIVED_MASKS_COUPON".equals(tag1.getTagCode())
+                            || "KG_NEW_MEMBER".equals(tag1.getTagCode()) //过滤音乐节活动的标签
+                            || "KG_OLD_MEMBER".equals(tag1.getTagCode())
+                            || "KG_PARTICIPATING_MEMBER".equals(tag1.getTagCode())
+                            || "KG_INTERACTIVE_MEMBER".equals(tag1.getTagCode())){
                         tags.add(tag1);
                     }
                 }
